@@ -14,13 +14,14 @@ def build_problem_language(prefix, language):
 def build_command(tup):
     problem = build_problem_language(tup[0], tup[1])
     return [build_cd(problem['language']), ["git add .", 'git commit -am "' + problem['comment'] + '"', "git push -u origin"]]
-java = ("J", "java")
-python = ("P3", "python")
-javascript = ("JS", "js")
-ruby = ("R", "ruby")
-golang = ("G", "golang")
-scala = ("S", "scala")
-languages = [java, python, javascript, ruby, golang, scala]
+languages = [
+    ("J", "java"),
+    ("P3", "python"),
+    ("JS", "js"),
+    ("R", "ruby"),
+    ("G", "golang"),
+    ("S", "scala"),
+]
 commands  = [ build_command(e) for e in languages ]
 
 for current_command in commands :
