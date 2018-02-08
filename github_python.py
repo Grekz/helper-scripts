@@ -43,31 +43,25 @@ def do_commits_and_shit():
 <h4>Solutions:</h4>
 <ul>
     <li>
-        <a href='https://github.com/Grekz/coding-problems-java/blob/working-branch/src/mx/grekz/leetcode/{1}/{2}.java' target='_blank'>
-            Java
+        <a href='https://github.com/Grekz/coding-problems-java/blob/working-branch/src/mx/grekz/leetcode/{1}/{2}.java' target='_blank'>Java
         </a>
     </li>
     <li>
-        <a href='https://github.com/Grekz/coding-problems-python/blob/working-branch/mx/grekz/leetcode/{1}/{2}.py' target='_blank'>
-            Python
+        <a href='https://github.com/Grekz/coding-problems-python/blob/working-branch/mx/grekz/leetcode/{1}/{2}.py' target='_blank'>Python
         </a>
     </li>
     <li>
-        <a href='https://github.com/Grekz/coding-problems-js/blob/working-branch/mx/grekz/leetcode/{1}/{2}.js' target='_blank'>
-            Javascript
+        <a href='https://github.com/Grekz/coding-problems-js/blob/working-branch/mx/grekz/leetcode/{1}/{2}.js' target='_blank'>Javascript
         </a>
     </li>
     <li>
-        <a href='https://github.com/Grekz/coding-problems-ruby/blob/working-branch/lib/mx/grekz/leetcode/{1}/{2}.rb' target='_blank'>
-            Ruby</a></li>
+        <a href='https://github.com/Grekz/coding-problems-ruby/blob/working-branch/lib/mx/grekz/leetcode/{1}/{2}.rb' target='_blank'>Ruby</a></li>
     <li>
-        <a href='https://github.com/Grekz/coding-problems-golang/blob/working-branch/src/mx/grekz/leetcode/{1}/{2}.go' target='_blank'>
-            Golang
+        <a href='https://github.com/Grekz/coding-problems-golang/blob/working-branch/src/mx/grekz/leetcode/{1}/{2}.go' target='_blank'>Golang
         </a>
     </li>
     <li>
-        <a href='https://github.com/Grekz/coding-problems-scala/blob/working-branch/src/mx/grekz/leetcode/{1}/{2}.scala' target='_blank'>
-            Scala
+        <a href='https://github.com/Grekz/coding-problems-scala/blob/working-branch/src/mx/grekz/leetcode/{1}/{2}.scala' target='_blank'>Scala
         </a>
     </li>
 </ul>
