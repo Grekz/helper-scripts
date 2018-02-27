@@ -19,7 +19,7 @@ def build_problem_language(prefix, language):
     return { 'comment' : prefix + "LCE-" + problem_name, 'language' : language }
 def build_command(tup):
     problem = build_problem_language(tup[0], tup[1])
-    return [build_cd(problem['language']), ["git add .", 'git commit -am "' + problem['comment'] + '"', "git push -u origin"]]
+    return [build_cd(problem['language']), ["git add .", 'git commit -am "' + problem['comment'] + '"', "git push -u origin"]] #
 def do_commits_and_shit():
     languages = [
         ("J", "java"),
@@ -43,26 +43,22 @@ def do_commits_and_shit():
 <h4>Solutions:</h4>
 <ul>
     <li>
-        <a href='https://github.com/Grekz/coding-problems-java/blob/working-branch/src/mx/grekz/leetcode/{1}/{2}.java' target='_blank'>Java
-        </a>
+        <a href='https://github.com/Grekz/coding-problems-java/blob/working-branch/src/mx/grekz/leetcode/{1}/{2}.java' target='_blank'>Java</a>
     </li>
     <li>
-        <a href='https://github.com/Grekz/coding-problems-python/blob/working-branch/mx/grekz/leetcode/{1}/{2}.py' target='_blank'>Python
-        </a>
+        <a href='https://github.com/Grekz/coding-problems-python/blob/working-branch/mx/grekz/leetcode/{1}/{2}.py' target='_blank'>Python</a>
     </li>
     <li>
-        <a href='https://github.com/Grekz/coding-problems-js/blob/working-branch/mx/grekz/leetcode/{1}/{2}.js' target='_blank'>Javascript
-        </a>
+        <a href='https://github.com/Grekz/coding-problems-js/blob/working-branch/mx/grekz/leetcode/{1}/{2}.js' target='_blank'>Javascript</a>
     </li>
     <li>
-        <a href='https://github.com/Grekz/coding-problems-ruby/blob/working-branch/lib/mx/grekz/leetcode/{1}/{2}.rb' target='_blank'>Ruby</a></li>
-    <li>
-        <a href='https://github.com/Grekz/coding-problems-golang/blob/working-branch/src/mx/grekz/leetcode/{1}/{2}.go' target='_blank'>Golang
-        </a>
+        <a href='https://github.com/Grekz/coding-problems-ruby/blob/working-branch/lib/mx/grekz/leetcode/{1}/{2}.rb' target='_blank'>Ruby</a>
     </li>
     <li>
-        <a href='https://github.com/Grekz/coding-problems-scala/blob/working-branch/src/mx/grekz/leetcode/{1}/{2}.scala' target='_blank'>Scala
-        </a>
+        <a href='https://github.com/Grekz/coding-problems-golang/blob/working-branch/src/mx/grekz/leetcode/{1}/{2}.go' target='_blank'>Golang</a>
+    </li>
+    <li>
+        <a href='https://github.com/Grekz/coding-problems-scala/blob/working-branch/src/mx/grekz/leetcode/{1}/{2}.scala' target='_blank'>Scala</a>
     </li>
 </ul>
 {3} #leetcode #java #python3 #javascript #ruby #golang #scala #{1}
