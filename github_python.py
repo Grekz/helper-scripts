@@ -6,8 +6,8 @@ problem_url  = input("Input your url: \nexample https://leetcode.com/problems/le
 problem_type = input("input your problem type vals=[easy, medium, hard]( default=easy) :\n") or 'easy'
 # problem_file = input("File name ( example = E066_PlusOne ): \n") or sys.exit('Error: File name needed')
 problem_name = input("Problem Name ( example = 058. Length of Last Word )\n") or sys.exit('Error: Problem name needed') + ' - Solution.'
-problem_number_file, problem_name_file = problem_name.split('.')
-if (len(problem_number_file) != 3 ) :
+problem_number_file, problem_name_file = problem_name.strip().split('.')
+if (len(problem_number_file) < 3 ) :
     problem_number_file = '0' + problem_number_file
 problem_number_file = 'E' + problem_number_file
 problem_name_file = problem_name_file.replace(' ', '')
