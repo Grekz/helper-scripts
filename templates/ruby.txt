@@ -1,0 +1,4 @@
+# @author grekz
+class {0}
+
+end

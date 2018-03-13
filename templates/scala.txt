@@ -1,0 +1,5 @@
+package mx.grekz.leetcode.{0}
+
+object {1} {{
+
+}}

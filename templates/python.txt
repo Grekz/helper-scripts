@@ -1,0 +1,5 @@
+'''
+@author: grekz
+'''
+
+class {0}:
