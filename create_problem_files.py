@@ -1,8 +1,9 @@
 import sys
 
+ignored_langs = ["golang", "scala"] if sys.argv[1] == "basic" else ( sys.argv[1:] or [] )
 problem_level = input("input your problem type vals=[easy, medium, hard]( default=easy) :\n") or 'easy'
 file_name = input("File name ( example = E066_PlusOne ): \n") or sys.exit('Error: File name needed')
-
+print(ignored_langs)
 def read_template(type, *format_vals):
 	file = open('C:\\git\\helper-scripts\\templates\\' + type + '.txt', 'r')
 	content = file.read().format(*format_vals)
@@ -26,9 +27,9 @@ languages = [
     ]
 for lang in languages :
 	( lang_name, lang_path, file_type, file_template ) = lang
-	formatted_path = 'C:\\git\\coding-problems-{1}\\{2}mx\\grekz\\leetcode\\{0}\\{3}.{4}'.format(problem_level, lang_name, lang_path, file_name, file_type)
-	# print(lang)
-	print(formatted_path)
-	cur_file = open(formatted_path, 'w+')
-	cur_file.write(file_template)
-	cur_file.close()
+	if not lang_name in ignored_langs: 
+		formatted_path = 'C:\\git\\coding-problems-{1}\\{2}mx\\grekz\\leetcode\\{0}\\{3}.{4}'.format(problem_level, lang_name, lang_path, file_name, file_type)
+		print(formatted_path)
+		cur_file = open(formatted_path, 'w+')
+		cur_file.write(file_template)
+		cur_file.close()
