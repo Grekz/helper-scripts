@@ -1,5 +1,8 @@
 package mx.grekz.leetcode.{0}
 
+/**
+ * @author grekz
+ */
 object {1} {{
 
 }}
