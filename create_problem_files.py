@@ -11,6 +11,7 @@ problem_level_dic = {
 }
 
 problem_level = problem_level_dic[problem_level[0]]
+
 print(ignored_langs)
 
 def read_template(type, *format_vals):

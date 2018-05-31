@@ -2,9 +2,14 @@ import subprocess
 import os
 import sys
 
+problem_level_dic = {
+    'e' : 'easy',
+    'm' : 'medium',
+    'h' : 'hard'
+}
 problem_url  = input("Input your url: \nexample https://leetcode.com/problems/length-of-last-word/description/\n") or sys.exit('Error: Problem url needed') 
-problem_type = input("input your problem type vals=[easy, medium, hard]( default=easy) :\n") or 'easy'
-# problem_file = input("File name ( example = E066_PlusOne ): \n") or sys.exit('Error: File name needed')
+problem_level = input("input your problem type vals=[easy, medium, hard]( default=easy) :\n") or 'easy'
+problem_type = problem_level_dic[problem_level[0]]
 problem_name = input("Problem Name ( example = 058. Length of Last Word )\n") or sys.exit('Error: Problem name needed') + ' - Solution.'
 problem_number_file, problem_name_file = problem_name.strip().split('.')
 if (len(problem_number_file) < 3 ) :
