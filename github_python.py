@@ -36,6 +36,7 @@ if is_mac :
     path_git = '/Users/juan.mendoza/extra-git'
 else :
     path_git = 'C:\\git\\'
+    
 def build_cd(language):
     return path_git + "coding-problems-" + language
 def build_problem_language(prefix, language):
