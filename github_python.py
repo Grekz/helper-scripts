@@ -2,6 +2,7 @@ import subprocess
 import os
 import sys
 
+is_mac =  os.name == 'mac'
 problem_level_dic = {
     'e' : 'easy',
     'm' : 'medium',
@@ -30,8 +31,13 @@ post_ini = '''
 post_end = '''
 </ul>
 {3} '''
+
+if is_mac :
+    path_git = '/Users/juan.mendoza/extra-git'
+else :
+    path_git = 'C:\\git\\'
 def build_cd(language):
-    return "C:\\git\\coding-problems-" + language
+    return path_git + "coding-problems-" + language
 def build_problem_language(prefix, language):
     return { 'comment' : prefix + "LCE-" + problem_name, 'language' : language }
 def build_command(tup):
