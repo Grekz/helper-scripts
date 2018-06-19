@@ -1,16 +1,30 @@
 import sys
 import os
+import re
 
-is_mac =  os.name == 'mac'
+def get_name(problem_name) :
+    problem_number_file, problem_name_file = problem_name.strip().split('.')
+    if (len(problem_number_file) < 3 ) :
+        problem_number_file = '0' + problem_number_file
+        problem_name = '0' + problem_name
+    problem_number_file = 'E' + problem_number_file
+    problem_name_file = re.sub(r"\s+", "", problem_name_file, flags=re.UNICODE)
+    problem_file = problem_number_file + '_' + problem_name_file
+    return problem_file
+	
+is_mac =  os.name == 'posix'
 ignored_langs = ["golang", "scala"] if len(sys.argv) > 1 and sys.argv[1] == "basic" else ( sys.argv[1:] or [] )
 problem_level = input("input your problem type vals:( e=easy, m=medium, h=hard ) [default=e] :\n") or 'e'
-file_name = input("File name ( example = E066_PlusOne ): \n") or sys.exit('Error: File name needed')
+file_name = input("File name ( example = 98. Validate Binary Search Tree ): \n") or sys.exit('Error: File name needed')
+file_name = get_name(file_name)
 
 problem_level_dic = {
 	'e' : 'easy',
 	'm' : 'medium',
 	'h' : 'hard'
 }
+
+print(os.name)	
 if is_mac :
 	slash = '/'
 	template_path = '/Users/juan.mendoza/extra-git/coding-problems-{1}/{2}mx/grekz/leetcode/{0}/{3}.{4}'
