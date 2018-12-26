@@ -13,7 +13,7 @@ def get_name(problem_name) :
     return problem_file
 	
 is_mac =  os.name == 'posix'
-ignored_langs = ["golang", "scala"] if len(sys.argv) > 1 and sys.argv[1] == "basic" else ( sys.argv[1:] or [] )
+ignored_langs = ["golang", "scala", "kotlin"] if len(sys.argv) > 1 and sys.argv[1] == "basic" else ( sys.argv[1:] or [] )
 problem_level = input("input your problem type vals:( e=easy, m=medium, h=hard ) [default=e] :\n") or 'e'
 file_name = input("File name ( example = 98. Validate Binary Search Tree ): \n") or sys.exit('Error: File name needed')
 file_name = get_name(file_name)
@@ -50,6 +50,7 @@ golang_template = read_template("golang", problem_level)
 python_template = read_template("python", file_name)
 ruby_template = read_template("ruby", file_name)
 scala_template = read_template("scala", problem_level,file_name)
+kotlin_template = read_template("kotlin", problem_level,file_name)
 
 languages = [
         ("java", 'src' + slash, "java", java_template),
@@ -58,6 +59,7 @@ languages = [
         ("ruby", 'lib' + slash, "rb", ruby_template),
         ("golang", 'src' + slash, "go", golang_template),
         ("scala", 'src' + slash, "scala", scala_template),
+        ("kotlin", 'src' + slash, "kotlin", kotlin_template),
     ]
 for lang in languages :
 	( lang_name, lang_path, file_type, file_template ) = lang

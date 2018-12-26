@@ -60,6 +60,7 @@ def do_commits_and_shit():
         ("R", "ruby", "ruby/blob/working-branch/lib/mx/grekz/leetcode/{1}/{2}.rb' target='_blank'>Ruby"),
         ("G", "golang", "golang/blob/working-branch/src/mx/grekz/leetcode/{1}/{2}.go' target='_blank'>Golang"),
         ("S", "scala", "scala/blob/working-branch/src/mx/grekz/leetcode/{1}/{2}.scala' target='_blank'>Scala"),
+        ("K", "kotlin", "kotlin/blob/working-branch/src/mx/grekz/leetcode/{1}/{2}.kt' target='_blank'>Kotlin"),
     ]
     commands  = [ build_command(e) for e in languages ]
     hashtags = "#leetcode #{1}"
@@ -82,5 +83,5 @@ def do_commits_and_shit():
     post += hashtags + '\n' + hashtags.replace(" #", ',')[1:]
     print(post.format(problem_url, problem_type, problem_file, problem_name))
 do_commits_and_shit()
-print(problem_file)
-print(problem_name)
+# print(problem_file)
+# print(problem_name)

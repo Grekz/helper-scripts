@@ -1,0 +1,8 @@
+package mx.grekz.leetcode.{0}
+
+/**
+ * @author grekz
+ */
+class {1} {{
+
+}}
