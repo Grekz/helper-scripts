@@ -16,7 +16,7 @@ def get_name(problem_name) :
         problem_number_file = '0' + problem_number_file
         problem_name = '0' + problem_name
     problem_number_file = 'E' + problem_number_file
-    problem_name_file = re.sub(r"\s+", "", problem_name_file, flags=re.UNICODE)
+    problem_name_file = re.sub(r"[\s-]+", "", problem_name_file, flags=re.UNICODE)
     problem_file = problem_number_file + '_' + problem_name_file
     return problem_file, problem_name
 
